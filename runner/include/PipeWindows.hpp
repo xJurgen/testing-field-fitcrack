@@ -55,7 +55,7 @@ public:
   /**
   * @brief   Constructor which creates the unblocking Linux pipe
   */
-  PipeWindows();
+  PipeWindows(bool is_NONBLOCK_);
 
   /**
   * @brief   Destructor which calls close on both ends of pipe

@@ -28,9 +28,7 @@ int PipeWindows::closeEnd(HANDLE pipe_end) {
 /* Protected */
 
 void PipeWindows::createPipe(bool is_NONBLOCK_) {
-  is_NONBLOCK_ = 1;
   /** Prepare security attributes */
-
   SECURITY_ATTRIBUTES security_attributes;
 
   security_attributes.nLength = sizeof(SECURITY_ATTRIBUTES);
@@ -39,6 +37,13 @@ void PipeWindows::createPipe(bool is_NONBLOCK_) {
 
   if (!CreatePipe(&read_, &write_, &security_attributes, 0))
   RunnerUtils::runtimeException("CreatePipe() failed", GetLastError());
+
+  if (is_NONBLOCK_) {
+    DWORD mode = PIPE_NOWAIT;
+    if (!SetNamedPipeHandleState(read_, &mode, NULL, NULL)) {
+       RunnerUtils::runtimeException("SetNamedPipeHandleState() failed", GetLastError());
+    }
+  }
 }
 
 int PipeWindows::readChar(char& c) {
@@ -75,8 +80,8 @@ int PipeWindows::readChar(char& c) {
 
 /* Public */
 
-PipeWindows::PipeWindows() : read_(NULL), write_(NULL), error_(ERROR_SUCCESS) {
-  createPipe(0);
+PipeWindows::PipeWindows(bool is_NONBLOCK_) : read_(NULL), write_(NULL), error_(ERROR_SUCCESS) {
+  createPipe(is_NONBLOCK_);
 }
 
 PipeWindows::~PipeWindows() {
