@@ -1,0 +1,1920 @@
+00:06:33 (20747): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory: Created directory ./OpenCL
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: Directory contains 3 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || pcfg-manager.bin
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 20 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+[ CUSTOM  ]: Directory:  found versioned file : pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '--preterminals-file'
+[ CHANGE  ]: ProcessBase: 	 argument './preterminals'
+[ CHANGE  ]: ProcessBase: 	 argument '--grammar-file'
+[ CHANGE  ]: ProcessBase: 	 argument './grammar'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CUSTOM  ]: Directory:  found versioned file : hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '-m'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '--optimized-kernel-enable'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '-a'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '../sample/data'
+[ CHANGE  ]: ProcessBase: 	 argument '-l'
+[ CHANGE  ]: ProcessBase: 	 argument '922111225'
+[ CHANGE  ]: ProcessBase: 	 argument '--status-timer=10'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile'
+[ CHANGE  ]: ProcessBase: 	 argument 'passwords.txt'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile-format=5'
+[ CHANGE  ]: ProcessBase: 	 argument '--quiet'
+[ CHANGE  ]: ProcessBase: 	 argument '--status'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '--restore-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--potfile-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--logfile-disable'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CHANGE  ]: ProcessBase: Process set start time : 1572908793280
+[  INFO   ]: TaskComputeBase: Manager process has started.
+[ CHANGE  ]: ProcessBase: Process set start time : 1572908793280
+[[  INFO   ]:   INFO   ProcessLinux]: : TaskComputeBaseExecuting: ./pcfg-manager.bin --preterminals-file ./preterminals --grammar-file ./grammar: 
+Hashcat process has started.
+[  INFO   ]: ProcessLinux: Executing: ./hashcat64_v421_1.bin -m 0 --optimized-kernel-enable --machine-readable -a 0 ../sample/data -l 922111225 --status-timer=10 --outfile passwords.txt --outfile-format=5 --quiet --status --machine-readable --restore-disable --potfile-disable --logfile-disable
+[ CUSTOM  ]: TaskNormal: Hashcat line: STATUS	6	SPEED	3966315	1000	EXEC_RUNTIME	6.804640	CURKU	0	PROGRESS	5242880	0	RECHASH	2	2	RECSALT	1	1	TEMP	65	REJECTED	0	UTIL	9	
+
+[ CUSTOM  ]: TaskNormal: Computed_hashes_index: 5242880
+[ CUSTOM  ]: TaskNormal: Difference_since_last_actualization: 5242880
+[ CHANGE  ]: ProcessBase: Process set stop time : 1572908801700
+[  INFO   ]: TaskNormal: Looking for hashcat output file: passwords.txt
+[ CUSTOM  ]: Directory:  found file : passwords.txt
+[  INFO   ]: ProcessBase: Process execution time : 8.42
+[  INFO   ]: TaskBase: Result: 
+n
+0
+8.42
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+
+[  INFO   ]: TaskBase: Result_file : out
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+00:06:41 (20747): called boinc_finish(0)
+00:07:31 (20811): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 4 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bin
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 24 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+[ CUSTOM  ]: Directory:  found versioned file : pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '--preterminals-file'
+[ CHANGE  ]: ProcessBase: 	 argument './preterminals'
+[ CHANGE  ]: ProcessBase: 	 argument '--grammar-file'
+[ CHANGE  ]: ProcessBase: 	 argument './grammar'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CUSTOM  ]: Directory:  found versioned file : hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '-m'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '--optimized-kernel-enable'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '-a'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '../sample/data'
+[ CHANGE  ]: ProcessBase: 	 argument '-l'
+[ CHANGE  ]: ProcessBase: 	 argument '922111225'
+[ CHANGE  ]: ProcessBase: 	 argument '--status-timer=10'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile'
+[ CHANGE  ]: ProcessBase: 	 argument 'passwords.txt'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile-format=5'
+[ CHANGE  ]: ProcessBase: 	 argument '--quiet'
+[ CHANGE  ]: ProcessBase: 	 argument '--status'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '--restore-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--potfile-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--logfile-disable'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CHANGE  ]: ProcessBase: Process set start time : 1572908852063
+[  INFO   ]: TaskComputeBase: Manager process has started.
+[ CHANGE  ]: ProcessBase: Process set start time : 1572908852063
+[[  INFO   ]:   INFO   ProcessLinux]: : TaskComputeBaseExecuting: ./pcfg-manager.bin --preterminals-file ./preterminals --grammar-file ./grammar: 
+Hashcat process has started.
+[  INFO   ]: ProcessLinux: Executing: ./hashcat64_v421_1.bin -m 0 --optimized-kernel-enable --machine-readable -a 0 ../sample/data -l 922111225 --status-timer=10 --outfile passwords.txt --outfile-format=5 --quiet --status --machine-readable --restore-disable --potfile-disable --logfile-disable
+00:08:52 (21031): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bina
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 25 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+runner.bin: src/ProcessPCFG.cpp:12: ProcessBase* ProcessPCFG::create(std::vector<char*>&, Directory&): Assertion `directory.findVersionedFile("pcfg", "bin", executable) && "PCFG Linux binary not found"' failed.
+SIGABRT: abort called
+Stack trace (11 frames):
+[0x4648f4]
+[0x45b5f0]
+[0x45b497]
+[0x579fd1]
+[0x56d49c]
+[0x56d512]
+[0x44eaad]
+[0x43958f]
+[0x410044]
+[0x55e9b9]
+[0x410eaa]
+
+Exiting...
+00:08:55 (21312): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bina
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 25 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+runner.bin: src/ProcessPCFG.cpp:12: ProcessBase* ProcessPCFG::create(std::vector<char*>&, Directory&): Assertion `directory.findVersionedFile("pcfg", "bin", executable) && "PCFG Linux binary not found"' failed.
+SIGABRT: abort called
+Stack trace (11 frames):
+[0x4648f4]
+[0x45b5f0]
+[0x45b497]
+[0x579fd1]
+[0x56d49c]
+[0x56d512]
+[0x44eaad]
+[0x43958f]
+[0x410044]
+[0x55e9b9]
+[0x410eaa]
+
+Exiting...
+00:08:58 (21314): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bina
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 25 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+runner.bin: src/ProcessPCFG.cpp:12: ProcessBase* ProcessPCFG::create(std::vector<char*>&, Directory&): Assertion `directory.findVersionedFile("pcfg", "bin", executable) && "PCFG Linux binary not found"' failed.
+SIGABRT: abort called
+Stack trace (11 frames):
+[0x4648f4]
+[0x45b5f0]
+[0x45b497]
+[0x579fd1]
+[0x56d49c]
+[0x56d512]
+[0x44eaad]
+[0x43958f]
+[0x410044]
+[0x55e9b9]
+[0x410eaa]
+
+Exiting...
+00:09:02 (21324): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bina
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 25 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+runner.bin: src/ProcessPCFG.cpp:12: ProcessBase* ProcessPCFG::create(std::vector<char*>&, Directory&): Assertion `directory.findVersionedFile("pcfg", "bin", executable) && "PCFG Linux binary not found"' failed.
+SIGABRT: abort called
+Stack trace (11 frames):
+[0x4648f4]
+[0x45b5f0]
+[0x45b497]
+[0x579fd1]
+[0x56d49c]
+[0x56d512]
+[0x44eaad]
+[0x43958f]
+[0x410044]
+[0x55e9b9]
+[0x410eaa]
+
+Exiting...
+00:10:28 (21447): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bina
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 25 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+runner.bin: src/ProcessPCFG.cpp:12: ProcessBase* ProcessPCFG::create(std::vector<char*>&, Directory&): Assertion `directory.findVersionedFile("pcfg", "bin", executable) && "PCFG Linux binary not found"' failed.
+SIGABRT: abort called
+Stack trace (11 frames):
+[0x464934]
+[0x45b630]
+[0x45b4d7]
+[0x57a011]
+[0x56d4dc]
+[0x56d552]
+[0x44eae5]
+[0x43959f]
+[0x410054]
+[0x55e9f9]
+[0x410eba]
+
+Exiting...
+00:12:15 (21535): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bina
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 25 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+[IMPORTANT]: : Runner failed with std::runtime_error: 
+ what() : Linux PCFG binary was not found.
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+00:12:16 (21535): called boinc_finish(0)
+00:12:50 (21557): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bina
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 25 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+[IMPORTANT]: : Runner failed with std::runtime_error: 
+ what() : Linux PCFG binary was not found.
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+00:12:50 (21557): called boinc_finish(0)
+00:13:25 (21596): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bina
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 25 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+[IMPORTANT]: : Runner failed with std::runtime_error: 
+ what() : chmod() failed for file: 
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+00:13:25 (21596): called boinc_finish(0)
+00:13:41 (21600): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bin
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 25 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+[ CUSTOM  ]: Directory:  found versioned file : pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '--preterminals-file'
+[ CHANGE  ]: ProcessBase: 	 argument './preterminals'
+[ CHANGE  ]: ProcessBase: 	 argument '--grammar-file'
+[ CHANGE  ]: ProcessBase: 	 argument './grammar'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CUSTOM  ]: Directory:  found versioned file : hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '-m'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '--optimized-kernel-enable'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '-a'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '../sample/data'
+[ CHANGE  ]: ProcessBase: 	 argument '-l'
+[ CHANGE  ]: ProcessBase: 	 argument '922111225'
+[ CHANGE  ]: ProcessBase: 	 argument '--status-timer=10'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile'
+[ CHANGE  ]: ProcessBase: 	 argument 'passwords.txt'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile-format=5'
+[ CHANGE  ]: ProcessBase: 	 argument '--quiet'
+[ CHANGE  ]: ProcessBase: 	 argument '--status'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '--restore-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--potfile-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--logfile-disable'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CHANGE  ]: ProcessBase: Process set start time : 1572909222048
+[  INFO   ]: TaskComputeBase: Manager process has started.
+[ CHANGE  ]: ProcessBase: Process set start time : 1572909222048
+[[  INFO     INFO   ]: ]: TaskComputeBaseProcessLinux: : Hashcat process has started.Executing: ./pcfg-manager.bin --preterminals-file ./preterminals --grammar-file ./grammar
+
+[  INFO   ]: ProcessLinux: Executing: ./hashcat64_v421_1.bin -m 0 --optimized-kernel-enable --machine-readable -a 0 ../sample/data -l 922111225 --status-timer=10 --outfile passwords.txt --outfile-format=5 --quiet --status --machine-readable --restore-disable --potfile-disable --logfile-disable
+[ CUSTOM  ]: TaskNormal: Hashcat line: STATUS	6	SPEED	3953507	1000	EXEC_RUNTIME	7.375680	CURKU	0	PROGRESS	5242880	0	RECHASH	2	2	RECSALT	1	1	TEMP	63	REJECTED	0	UTIL	10	
+
+[ CUSTOM  ]: TaskNormal: Computed_hashes_index: 5242880
+[ CUSTOM  ]: TaskNormal: Difference_since_last_actualization: 5242880
+[ CHANGE  ]: ProcessBase: Process set stop time : 1572909228988
+[  INFO   ]: TaskNormal: Looking for hashcat output file: passwords.txt
+[ CUSTOM  ]: Directory:  found file : passwords.txt
+[  INFO   ]: ProcessBase: Process execution time : 6.94
+[  INFO   ]: TaskBase: Result: 
+n
+0
+6.94
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+
+[ CUSTOM  ]: Directory:  found file : out
+[  INFO   ]: TaskBase: Result_file : ./out
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+00:13:48 (21600): called boinc_finish(0)
+00:14:01 (21641): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 4 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bin
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 24 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+[ CUSTOM  ]: Directory:  found versioned file : pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '--preterminals-file'
+[ CHANGE  ]: ProcessBase: 	 argument './preterminals'
+[ CHANGE  ]: ProcessBase: 	 argument '--grammar-file'
+[ CHANGE  ]: ProcessBase: 	 argument './grammar'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CUSTOM  ]: Directory:  found versioned file : hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '-m'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '--optimized-kernel-enable'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '-a'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '../sample/data'
+[ CHANGE  ]: ProcessBase: 	 argument '-l'
+[ CHANGE  ]: ProcessBase: 	 argument '922111225'
+[ CHANGE  ]: ProcessBase: 	 argument '--status-timer=10'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile'
+[ CHANGE  ]: ProcessBase: 	 argument 'passwords.txt'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile-format=5'
+[ CHANGE  ]: ProcessBase: 	 argument '--quiet'
+[ CHANGE  ]: ProcessBase: 	 argument '--status'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '--restore-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--potfile-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--logfile-disable'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CHANGE  ]: ProcessBase: Process set start time : 1572909241323
+[  INFO   ]: [TaskComputeBase  INFO   : ]: Manager process has started.ProcessLinux
+: Executing: ./pcfg-manager.bin --preterminals-file ./preterminals --grammar-file ./grammar
+[ CHANGE  ]: ProcessBase: Process set start time : 1572909241323
+[[  INFO     INFO   ]: ]: TaskComputeBaseProcessLinux: : Hashcat process has started.Executing: ./hashcat64_v421_1.bin -m 0 --optimized-kernel-enable --machine-readable -a 0 ../sample/data -l 922111225 --status-timer=10 --outfile passwords.txt --outfile-format=5 --quiet --status --machine-readable --restore-disable --potfile-disable --logfile-disable
+
+[ CUSTOM  ]: TaskNormal: Hashcat line: STATUS	6	SPEED	4037347	1000	EXEC_RUNTIME	6.742272	CURKU	0	PROGRESS	5242880	0	RECHASH	2	2	RECSALT	1	1	TEMP	66	REJECTED	0	UTIL	24	
+
+[ CUSTOM  ]: TaskNormal: Computed_hashes_index: 5242880
+[ CUSTOM  ]: TaskNormal: Difference_since_last_actualization: 5242880
+[ CHANGE  ]: ProcessBase: Process set stop time : 1572909249135
+[  INFO   ]: TaskNormal: Looking for hashcat output file: passwords.txt
+[ CUSTOM  ]: Directory:  found file : passwords.txt
+[  INFO   ]: ProcessBase: Process execution time : 7.812
+[  INFO   ]: TaskBase: Result: 
+n
+0
+7.812
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+
+[ CUSTOM  ]: Directory:  found file : out
+[  INFO   ]: TaskBase: Result_file : ./out
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+00:14:09 (21641): called boinc_finish(0)
+00:14:43 (21756): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_normal
+[ CUSTOM  ]: Directory:  found file : config_normal
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 0
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 5 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 4 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bin
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 24 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 0
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : dict1
+[ CUSTOM  ]: Directory:  found file : dict1
+[ CHANGE  ]: AttackBase: Adding argument '../sample/dict1'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+[ CUSTOM  ]: Directory:  found versioned file : hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '-m'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '--optimized-kernel-enable'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '-a'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '../sample/data'
+[ CHANGE  ]: ProcessBase: 	 argument '--status-timer=10'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile'
+[ CHANGE  ]: ProcessBase: 	 argument 'passwords.txt'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile-format=5'
+[ CHANGE  ]: ProcessBase: 	 argument '--quiet'
+[ CHANGE  ]: ProcessBase: 	 argument '--status'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '--restore-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--potfile-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--logfile-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '../sample/dict1'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CHANGE  ]: ProcessBase: Process set start time : 1572909283643
+[  INFO   ]: TaskComputeBase: [Hashcat process has started.  INFO   
+]: ProcessLinux: Executing: ./hashcat64_v421_1.bin -m 0 --optimized-kernel-enable --machine-readable -a 0 ../sample/data --status-timer=10 --outfile passwords.txt --outfile-format=5 --quiet --status --machine-readable --restore-disable --potfile-disable --logfile-disable ../sample/dict1
+[ CUSTOM  ]: TaskNormal: Hashcat line: STATUS	5	SPEED	28977375	1000	EXEC_RUNTIME	0.816672	CURKU	306707	PROGRESS	306707	306707	RECHASH	0	2	RECSALT	0	1	TEMP	65	REJECTED	0	UTIL	75	
+
+[ CUSTOM  ]: TaskNormal: Computed_hashes_index: 306707
+[ CUSTOM  ]: TaskNormal: Difference_since_last_actualization: 306707
+[ CHANGE  ]: ProcessBase: Process set stop time : 1572909286705
+[  INFO   ]: TaskNormal: Looking for hashcat output file: passwords.txt
+[ CUSTOM  ]: Directory:  found file : passwords.txt
+[  INFO   ]: ProcessBase: Process execution time : 3.062
+[  INFO   ]: TaskBase: Result: 
+n
+0
+3.062
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+
+[ CUSTOM  ]: Directory:  found file : out
+[  INFO   ]: TaskBase: Result_file : ./out
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+00:14:46 (21756): called boinc_finish(0)
+00:15:02 (21798): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
+[  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: Directory:  found file : config_pcfg
+[ CUSTOM  ]: ConfigTask: ConfigTask key: name is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'name' value : 'normal task sample' length: sent size = 18, actual string size = 18
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: name => normal task sample
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_mode' value : '9' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_mode => 9
+[ CUSTOM  ]: ConfigTask: ConfigTask key: attack_submode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'attack_submode' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: attack_submode => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hash_type is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hash_type' value : '0' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hash_type => 0
+[ CUSTOM  ]: ConfigTask: ConfigTask key: mode is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'mode' value : 'n' length: sent size = 1, actual string size = 1
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: mode => n
+[ CUSTOM  ]: ConfigTask: ConfigTask key: hc_keyspace is supported.
+[ CUSTOM  ]: ConfigTask: ConfigTask verifying field : 'hc_keyspace' value : '922111225' length: sent size = 9, actual string size = 9
+[ CHANGE  ]: ConfigTask: ConfigTask adding option: hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: ConfigTask options:
+[ CONTENT ]: ConfigTask: || attack_mode => 9
+[ CONTENT ]: ConfigTask: || attack_submode => 0
+[ CONTENT ]: ConfigTask: || hash_type => 0
+[ CONTENT ]: ConfigTask: || hc_keyspace => 922111225
+[ CONTENT ]: ConfigTask: || mode => n
+[ CONTENT ]: ConfigTask: || name => normal task sample
+[ CONTENT ]: ConfigTask: ConfigTask file contained 6 options.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CHANGE  ]: std: Workunit name is LocalWorkunit
+[ CHANGE  ]: Task: HostConfigPath is /etc/standalone.conf
+[ CHANGE  ]: ConfigHost: Path set to /etc/standalone.conf
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CONTENT ]: Directory: Directories in directory .: 
+[ CONTENT ]: Directory: || .
+[ CONTENT ]: Directory: || ..
+[ CONTENT ]: Directory: || OpenCL
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 4 directories.
+[ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
+[ CONTENT ]: Directory: || boinc_lockfile
+[ CONTENT ]: Directory: || clean.sh
+[ CONTENT ]: Directory: || config
+[ CONTENT ]: Directory: || data
+[ CONTENT ]: Directory: || dict1
+[ CONTENT ]: Directory: || formats.list
+[ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
+[ CONTENT ]: Directory: || hashcat.hcstat2
+[ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat64_v421_1.bin
+[ CONTENT ]: Directory: || hashcat64_v421_1.exe
+[ CONTENT ]: Directory: || hashcat_files_v421_1.zip
+[ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
+[ CONTENT ]: Directory: || pcfg-manager.bin
+[ CONTENT ]: Directory: || pcfg-manager.exe
+[ CONTENT ]: Directory: || preterminals
+[ CONTENT ]: Directory: || rules
+[ CONTENT ]: Directory: || runner.bin
+[ CONTENT ]: Directory: || runner.exe
+[ CONTENT ]: Directory: || stderr.txt
+[ CONTENT ]: Directory: Directory contains 24 files.
+[ CUSTOM  ]: ConfigTask: key : mode, value : n
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
+[ CHANGE  ]: AttackBase: Adding argument '-m'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CHANGE  ]: AttackBase: Adding argument '--optimized-kernel-enable'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
+[ CHANGE  ]: AttackBase: Adding argument '-a'
+[ CHANGE  ]: AttackBase: Adding argument '0'
+[ CUSTOM  ]: ConfigTask: key : attack_submode, value : 0
+[ CUSTOM  ]: AttackCrackingBase:  : file_name : data
+[ CUSTOM  ]: Directory:  found file : data
+[ CHANGE  ]: AttackBase: Adding argument '../sample/data'
+[ CUSTOM  ]: ConfigTask: key : hc_keyspace, value : 922111225
+[ CHANGE  ]: AttackBase: Adding argument '-l'
+[ CHANGE  ]: AttackBase: Adding argument '922111225'
+[ CHANGE  ]: AttackBase: Adding argument '--status-timer=10'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile'
+[ CHANGE  ]: AttackBase: Adding argument 'passwords.txt'
+[ CHANGE  ]: AttackBase: Adding argument '--outfile-format=5'
+[ CHANGE  ]: AttackBase: Adding argument '--quiet'
+[ CHANGE  ]: AttackBase: Adding argument '--status'
+[ CHANGE  ]: AttackBase: Adding argument '--machine-readable'
+[ CHANGE  ]: AttackBase: Adding argument '--restore-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--potfile-disable'
+[ CHANGE  ]: AttackBase: Adding argument '--logfile-disable'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--preterminals-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : preterminals
+[ CUSTOM  ]: Directory:  found file : preterminals
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './preterminals'
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument '--grammar-file'
+[ CUSTOM  ]: AttackPCFG:  : file_name : grammar
+[ CUSTOM  ]: Directory:  found file : grammar
+[ CHANGE  ]: AttackPCFG: Adding PCFG argument './grammar'
+[IMPORTANT]: ConfigHost: File doesn't exist at /etc/standalone.conf
+[  INFO   ]: ConfigHost: Content of file: 
+[IMPORTANT]: ConfigHost: File wasn't read therefore its content can't be parsed.
+[ CUSTOM  ]: Directory:  found versioned file : pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./pcfg-manager.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '--preterminals-file'
+[ CHANGE  ]: ProcessBase: 	 argument './preterminals'
+[ CHANGE  ]: ProcessBase: 	 argument '--grammar-file'
+[ CHANGE  ]: ProcessBase: 	 argument './grammar'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CUSTOM  ]: Directory:  found versioned file : hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Changed Process executable to: ./hashcat64_v421_1.bin
+[ CHANGE  ]: ProcessBase: Process arguments: 
+[ CHANGE  ]: ProcessBase: 	 argument '-m'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '--optimized-kernel-enable'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '-a'
+[ CHANGE  ]: ProcessBase: 	 argument '0'
+[ CHANGE  ]: ProcessBase: 	 argument '../sample/data'
+[ CHANGE  ]: ProcessBase: 	 argument '-l'
+[ CHANGE  ]: ProcessBase: 	 argument '922111225'
+[ CHANGE  ]: ProcessBase: 	 argument '--status-timer=10'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile'
+[ CHANGE  ]: ProcessBase: 	 argument 'passwords.txt'
+[ CHANGE  ]: ProcessBase: 	 argument '--outfile-format=5'
+[ CHANGE  ]: ProcessBase: 	 argument '--quiet'
+[ CHANGE  ]: ProcessBase: 	 argument '--status'
+[ CHANGE  ]: ProcessBase: 	 argument '--machine-readable'
+[ CHANGE  ]: ProcessBase: 	 argument '--restore-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--potfile-disable'
+[ CHANGE  ]: ProcessBase: 	 argument '--logfile-disable'
+[ CHANGE  ]: ProcessBase: -------------------------------
+[ CHANGE  ]: ProcessBase: Process set start time : 1572909303144
+[  INFO   ]: TaskComputeBase: Manager process has started.
+[ CHANGE  ]: ProcessBase: Process set start time : 1572909303145
+[[  INFO     INFO   ]: ]: TaskComputeBaseProcessLinux: : Hashcat process has started.Executing: ./pcfg-manager.bin --preterminals-file ./preterminals --grammar-file ./grammar
+
+[  INFO   ]: ProcessLinux: Executing: ./hashcat64_v421_1.bin -m 0 --optimized-kernel-enable --machine-readable -a 0 ../sample/data -l 922111225 --status-timer=10 --outfile passwords.txt --outfile-format=5 --quiet --status --machine-readable --restore-disable --potfile-disable --logfile-disable
+[ CUSTOM  ]: TaskNormal: Hashcat line: STATUS	6	SPEED	3749509	1000	EXEC_RUNTIME	7.227312	CURKU	0	PROGRESS	5242880	0	RECHASH	2	2	RECSALT	1	1	TEMP	70	REJECTED	0	UTIL	27	
+
+[ CUSTOM  ]: TaskNormal: Computed_hashes_index: 5242880
+[ CUSTOM  ]: TaskNormal: Difference_since_last_actualization: 5242880
+[ CHANGE  ]: ProcessBase: Process set stop time : 1572909311041
+[  INFO   ]: TaskNormal: Looking for hashcat output file: passwords.txt
+[ CUSTOM  ]: Directory:  found file : passwords.txt
+[  INFO   ]: ProcessBase: Process execution time : 7.896
+[  INFO   ]: TaskBase: Result: 
+n
+0
+7.896
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+
+[ CUSTOM  ]: Directory:  found file : out
+[  INFO   ]: TaskBase: Result_file : ./out
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+00:15:11 (21798): called boinc_finish(0)

@@ -30,10 +30,10 @@ windows: CXXPATHS+=-L'./lib/windows_x86_64/'
 windows: $(OBJDIR) $(BINDIR) runner
 
 $(OBJDIR): 
-	mkdir $@
+	mkdir -p $@
 
 $(BINDIR): 
-	mkdir $@
+	mkdir -p $@
 
 $(OBJDIR)%.o: $(SRCDIR)%.cpp  
 	$(CXX) $(CXXPATHS) $(LDXXFLAGS) -c $< -o $@  
