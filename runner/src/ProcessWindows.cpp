@@ -16,6 +16,8 @@ void ProcessWindows::launchSubprocess() {
   /** Execute application - print it before redirection so that it goes to
   * stderr.txt */
   Logging::debugPrint(Logging::Detail::GeneralInfo, "Executing: " + command);
+  if (!in_pipe_) abort();
+  startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getWriteHandle();
 
   /** Start the child process */
   if(!CreateProcess(NULL,   // Executable path
