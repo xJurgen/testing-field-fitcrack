@@ -116,7 +116,7 @@ void ProcessBase::initInPipe(){
 }
 
 void ProcessBase::setInPipe(PipeBase *in_pipe){
-  puts("SetInPipe");
+  printf("SetInPipe %p\n", (void *)in_pipe);
   this->in_pipe_ = in_pipe;
 }
 
