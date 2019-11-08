@@ -18,7 +18,7 @@ void ProcessWindows::launchSubprocess() {
   * stderr.txt */
   Logging::debugPrint(Logging::Detail::GeneralInfo, "Executing: " + command);
   printf("ptr %p this->in_pipe_ %p\n", (void *)in_pipe_, (void *)this->in_pipe_);
-  startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getWriteHandle();
+  startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getReadHandle();
 
   /** Start the child process */
   if(!CreateProcess(NULL,   // Executable path
@@ -55,7 +55,7 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
   }
   err_pipe_ = new PipeWindows(true);
   in_pipe_ = nullptr;
-
+  puts("Ctor");
   if (!SetHandleInformation(static_cast<PipeWindows*>(out_pipe_)->getReadHandle(), HANDLE_FLAG_INHERIT, 0)) {
     RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
   }
