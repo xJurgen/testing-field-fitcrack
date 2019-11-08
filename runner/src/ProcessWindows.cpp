@@ -20,7 +20,7 @@ void ProcessWindows::launchSubprocess() {
   startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getWriteHandle();
 
   /** Start the child process */
-  if(!CreateProcess(NULL,   // Executable path
+  if(!CreateProcess(executable_.c_str(),   // Executable path
   (char*)(command.c_str()),        // Command line
   NULL,           // Process handle not inheritable
   NULL,           // Thread handle not inheritable
