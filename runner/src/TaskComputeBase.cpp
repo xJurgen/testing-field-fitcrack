@@ -109,6 +109,7 @@ void TaskComputeBase::initialize() {
 
     if(isPCFG_){
       process_->initInPipe();
+      printf("manager_pipeout %p\n", (void *)manager_pipeout);
       process_->setInPipe(manager_pipeout);
     }
   }
