@@ -17,7 +17,7 @@ void ProcessWindows::launchSubprocess() {
   /** Execute application - print it before redirection so that it goes to
   * stderr.txt */
   Logging::debugPrint(Logging::Detail::GeneralInfo, "Executing: " + command);
-  printf("ptr %p\n", (void *)in_pipe_);
+  printf("ptr %p this->in_pipe_ %p\n", (void *)in_pipe_, (void *)this->in_pipe_);
   startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getWriteHandle();
 
   /** Start the child process */
