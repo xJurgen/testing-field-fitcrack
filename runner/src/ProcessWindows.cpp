@@ -45,6 +45,11 @@ out_pipe_->closeWrite();
 }
 /* Public */
 
+void ProcessWindows::setInPipe(PipeBase *in_pipe){
+  printf("SetInPipe Windows %p\n", (void *)in_pipe);
+  this->in_pipe_ = in_pipe;
+}
+
 ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >& exec_args, bool isPCFG) : ProcessBase(exec_name, exec_args) {
 
   if(isPCFG){

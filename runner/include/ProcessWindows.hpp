@@ -28,7 +28,7 @@ protected:
   void launchSubprocess();
 
 public:
-  
+
   /**
   * @brief   Conctutor which sets name of the executable
   * @param   exec_name [in] Name of the executable
@@ -58,6 +58,8 @@ public:
   * @return  Return code of CreateProcess()
   */
   int run();
+
+  void setInPipe(PipeBase *in_pipe);
 
 };		// end of class ProcessWindows
 #endif // PROCESSWINDOWS_HPP
