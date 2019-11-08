@@ -16,11 +16,11 @@ void ProcessWindows::launchSubprocess() {
   /** Execute application - print it before redirection so that it goes to
   * stderr.txt */
   Logging::debugPrint(Logging::Detail::GeneralInfo, "Executing: " + command);
-  if (!in_pipe_) abort();
+  printf("ptr %p\n", (void *)in_pipe_);
   startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getWriteHandle();
 
   /** Start the child process */
-  if(!CreateProcess(executable_.c_str(),   // Executable path
+  if(!CreateProcess(NULL,   // Executable path
   (char*)(command.c_str()),        // Command line
   NULL,           // Process handle not inheritable
   NULL,           // Thread handle not inheritable
@@ -35,6 +35,8 @@ void ProcessWindows::launchSubprocess() {
     out_pipe_->closeAll();
     RunnerUtils::runtimeException("CreateProcess() failed", GetLastError());
   }
+
+  printf("ok\n");
 
 /* Parent doesn't write */
 err_pipe_->closeWrite();
