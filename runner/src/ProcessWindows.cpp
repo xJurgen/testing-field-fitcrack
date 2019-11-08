@@ -10,6 +10,7 @@
 /* Protected */
 
 void ProcessWindows::launchSubprocess() {
+  puts("launchSubprocess");
   std::string command;
   command = getReadableArguments();
 
