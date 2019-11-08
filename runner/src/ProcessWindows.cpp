@@ -18,7 +18,7 @@ void ProcessWindows::launchSubprocess() {
   Logging::debugPrint(Logging::Detail::GeneralInfo, "Executing: " + command);
 
   /** Start the child process */
-  if(!CreateProcess(executable_.c_str(),   // Executable path
+  if(!CreateProcess(NULL,   // Executable path
   (char*)(command.c_str()),        // Command line
   NULL,           // Process handle not inheritable
   NULL,           // Thread handle not inheritable
