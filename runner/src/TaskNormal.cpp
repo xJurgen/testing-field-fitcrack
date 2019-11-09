@@ -262,8 +262,10 @@ void TaskNormal::progress() {
     PRINT_POSITION_IN_CODE();
     
     std::string line;
-    if (process_PCFGmanager_ && (line = process_PCFGmanager_->readOutPipeLine(process_PCFGmanager_), !line.empty())) {
-        process_->GetPipeIn()->writeToStdin((char *)line.data(), line.length());
+    line = process_PCFGmanager_->readOutPipeLine(process_PCFGmanager_);
+    if(!line.empty()) {
+        printf("Data: %s\n", line.data());
+        process_->GetPipeIn()->writeToStdin((char *)line.data(), line.size());
     }
 
     line = process_->readOutPipeLine(process_);
