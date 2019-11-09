@@ -265,7 +265,7 @@ void TaskNormal::progress() {
     line = process_PCFGmanager_->readOutPipeLine(process_PCFGmanager_);
     if(!line.empty()) {
         printf("Data: %s\n", line.data());
-        process_->GetPipeIn()->writeToStdin((char *)line.data(), line.size());
+        //process_->GetPipeIn()->writeToStdin((char *)line.data(), line.size());
     }
 
     line = process_->readOutPipeLine(process_);
