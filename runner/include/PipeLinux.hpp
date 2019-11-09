@@ -116,6 +116,7 @@ class PipeLinux : public PipeBase {
          * @return  Number of written characters
          */
         int writeMessage(std::string& message);
+        int writeMessageStdin(std::string& message);
 
 
 };

@@ -93,6 +93,7 @@ class PipeBase {
          * @return  Number of written characters
          */
         virtual int writeMessage(std::string &message) = 0;
+        virtual int writeMessageStdin(std::string& message) = 0;
 };
 
 #endif //NAMEDPIPE_HPP

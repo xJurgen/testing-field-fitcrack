@@ -128,4 +128,16 @@ int  PipeWindows::writeMessage(std::string& message) {
 
   return written_chars;
 }
+
+int  PipeWindows::writeMessageStdin(std::string& message) {
+  DWORD written_chars = 0;
+
+  Logging::debugPrint(Logging::Detail::DevelDebug, POSITION_IN_CODE + "Pipe writing message : " + message);
+
+  if (!WriteFile(read_, message.data(), message.length(), &written_chars, NULL)) {
+    RunnerUtils::runtimeException("WriteFile() failed", GetLastError());
+  }
+
+  return written_chars;
+}
 #endif // _WIN32

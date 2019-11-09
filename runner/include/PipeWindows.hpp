@@ -108,6 +108,7 @@ public:
   * @return  Number of written characters
   */
   int writeMessage(std::string& message);
+  int writeMessageStdin(std::string& message);
 };
 #endif // NAMEDPIPEWINDOWS_HPP
 
