@@ -263,7 +263,7 @@ void TaskNormal::progress() {
 
     if (!line_pcfg.empty()) {
         printf("Data from pcfg: %s\n", line_pcfg.c_str());
-        process_->WriteMsg(line_pcfg);
+      //  process_->WriteMsg(line_pcfg);
     }
 
     line = process_->readOutPipeLine(process_);
