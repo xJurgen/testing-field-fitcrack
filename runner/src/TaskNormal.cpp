@@ -260,9 +260,10 @@ void TaskNormal::progress() {
   while (process_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
-
-    if (process_PCFGmanager_ && process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf))) {
-        process_->GetPipeIn()->writeToStdin(buf, sizeof(buf));
+    
+    std::string line;
+    if (process_PCFGmanager_ && (line = process_PCFGmanager_->readOutPipeLine(process_PCFGmanager_), !line.empty())) {
+        process_->GetPipeIn()->writeToStdin((char *)line.data(), line.length());
     }
 
     line = process_->readOutPipeLine(process_);
