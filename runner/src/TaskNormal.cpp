@@ -255,7 +255,7 @@ void TaskNormal::progress() {
 
   PRINT_POSITION_IN_CODE();
 
-  char buf[32647];
+  char buf[16];
 
   while (process_->isRunning()) {
 

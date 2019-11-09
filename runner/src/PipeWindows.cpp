@@ -116,7 +116,7 @@ bool PipeWindows::isWriteOpen() const {
   return isEndOpen(write_);
 }
 
-
+#if 0
 int  PipeWindows::writeMessage(std::string& message) {
   DWORD written_chars = 0;
 
@@ -128,12 +128,13 @@ int  PipeWindows::writeMessage(std::string& message) {
 
   return written_chars;
 }
+#endif
 
 bool PipeWindows::readFromStdout(char *buf, size_t n) {
   DWORD written_chars = 0;
 
   if (!ReadFile(write_, buf, n, &written_chars, NULL)) {
-    RunnerUtils::runtimeException("ReadFile() failed", GetLastError());
+    RunnerUtils::runtimeException("ReadFile() failed", (int) GetLastError());
   }
 
   return written_chars > 0;
@@ -144,7 +145,7 @@ bool PipeWindows::writeToStdin(char *buf, size_t n) {
   DWORD written_chars = 0;
 
   if (!WriteFile(read_, buf, n, &written_chars, NULL)) {
-    RunnerUtils::runtimeException("WriteFile() failed", GetLastError());
+    RunnerUtils::runtimeException("WriteFile() failed", (int) GetLastError());
   }
 
   return written_chars > 0;
