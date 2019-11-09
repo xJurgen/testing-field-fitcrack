@@ -92,8 +92,8 @@ class PipeBase {
          * @param   message [in] Message to write to pipe
          * @return  Number of written characters
          */
-        virtual int writeMessage(std::string &message) = 0;
-        virtual int writeMessageStdin(std::string& message) = 0;
+        virtual bool writeToStdin(char *buf, size_t n) = 0;
+        virtual bool readFromStdout(char *buf, size_t n) = 0;
 };
 
 #endif //NAMEDPIPE_HPP

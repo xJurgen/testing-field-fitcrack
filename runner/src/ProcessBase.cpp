@@ -112,6 +112,10 @@ PipeBase* ProcessBase::GetPipeOut(){
   return out_pipe_;
 }
 
+PipeBase* ProcessBase::GetPipeIn() {
+  return in_pipe_;
+}
+
 void ProcessBase::initInPipe(){
   this->in_pipe_ = nullptr;
 }

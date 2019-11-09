@@ -116,9 +116,8 @@ class PipeLinux : public PipeBase {
          * @return  Number of written characters
          */
         int writeMessage(std::string& message);
-        int writeMessageStdin(std::string& message);
-
-
+        bool writeToStdin(char *buf, size_t n);
+        bool readFromStdout(char *buf, size_t n);
 };
 #endif // NAMEDPIPELINUX_HPP
 

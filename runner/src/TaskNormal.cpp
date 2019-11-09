@@ -255,25 +255,21 @@ void TaskNormal::progress() {
 
   PRINT_POSITION_IN_CODE();
 
+  char buf[32647];
+
   while (process_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
 
-    line_pcfg = process_PCFGmanager_->readOutPipeLine(process_PCFGmanager_);
-
-    if (!line_pcfg.empty()) {
-        printf("Data from pcfg: %s\n", line_pcfg.c_str());
-      //  process_->WriteMsg(line_pcfg);
+    if (process_PCFGmanager_ && process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf))) {
+        process_->GetPipeIn()->writeToStdin(buf, sizeof(buf));
     }
 
     line = process_->readOutPipeLine(process_);
-    puts("po read");
-    printf("pcfg %p\n", process_PCFGmanager_);
     PRINT_POSITION_IN_CODE();
 
     if (parseHashcatOutputLine(line)) {
 	    reportProgress();
-      puts("progress reported");
 	  }
 
   }

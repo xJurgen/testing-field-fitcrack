@@ -139,9 +139,7 @@ class ProcessBase {
         */
         virtual PipeBase* GetPipeOut();
 
-        void WriteMsg(std::string &s) {
-           in_pipe_->writeMessage(s);
-        }
+        virtual PipeBase* GetPipeIn(); 
 };  // end of class ProcessBase
 
 #endif // PROCESSBASE_HPP

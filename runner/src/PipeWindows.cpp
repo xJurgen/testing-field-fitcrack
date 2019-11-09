@@ -129,15 +129,24 @@ int  PipeWindows::writeMessage(std::string& message) {
   return written_chars;
 }
 
-int  PipeWindows::writeMessageStdin(std::string& message) {
+bool PipeWindows::readFromStdout(char *buf, size_t n) {
   DWORD written_chars = 0;
 
-  Logging::debugPrint(Logging::Detail::DevelDebug, POSITION_IN_CODE + "Pipe writing message : " + message);
+  if (!ReadFile(write_, buf, n, &written_chars, NULL)) {
+    RunnerUtils::runtimeException("ReadFile() failed", GetLastError());
+  }
 
-  if (!WriteFile(read_, message.data(), message.length(), &written_chars, NULL)) {
+  return written_chars > 0;
+}
+
+
+bool PipeWindows::writeToStdin(char *buf, size_t n) {
+  DWORD written_chars = 0;
+
+  if (!WriteFile(read_, buf, n, &written_chars, NULL)) {
     RunnerUtils::runtimeException("WriteFile() failed", GetLastError());
   }
 
-  return written_chars;
+  return written_chars > 0;
 }
 #endif // _WIN32
