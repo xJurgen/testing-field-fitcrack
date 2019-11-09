@@ -59,8 +59,6 @@ public:
   */
   int run();
 
-  void setInPipe(PipeBase *in_pipe);
-
 };		// end of class ProcessWindows
 #endif // PROCESSWINDOWS_HPP
 

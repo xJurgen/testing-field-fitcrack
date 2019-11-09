@@ -109,7 +109,6 @@ void TaskComputeBase::initialize() {
 
     if(isPCFG_){
       process_->initInPipe();
-      printf("manager_pipeout %p\n", (void *)manager_pipeout);
       process_->setInPipe(manager_pipeout);
     }
   }
@@ -135,6 +134,9 @@ void TaskComputeBase::startComputation() {
       Logging::debugPrint(Logging::Detail::GeneralInfo, "Manager process has started.");
     }
   }
+
+  puts("startCom");
+
   if (!process_->isRunning()) {
     process_->run();
     Logging::debugPrint(Logging::Detail::GeneralInfo, "Hashcat process has started.");

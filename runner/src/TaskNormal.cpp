@@ -258,13 +258,14 @@ void TaskNormal::progress() {
   while (process_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
-
+    puts("pred read");
     line = process_->readOutPipeLine(process_);
-
+    puts("po read");
     PRINT_POSITION_IN_CODE();
 
     if (parseHashcatOutputLine(line)) {
 	    reportProgress();
+      puts("progress reported");
 	  }
 
   }

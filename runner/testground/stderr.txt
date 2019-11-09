@@ -1,7 +1,6 @@
-15:59:01 (31471): Can't open init data file - running in standalone mode
+14:59:39 (6218): Can't open init data file - running in standalone mode
 [IMPORTANT]: : Runner 3.1.2
 [ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
-[ CUSTOM  ]: Directory: Created directory ./OpenCL
 [  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
 [ CUSTOM  ]: Directory:  found file : config_pcfg
 [ CUSTOM  ]: Directory:  found file : config_pcfg
@@ -40,8 +39,12 @@
 [ CONTENT ]: Directory: || .
 [ CONTENT ]: Directory: || ..
 [ CONTENT ]: Directory: || OpenCL
-[ CONTENT ]: Directory: Directory contains 3 directories.
+[ CONTENT ]: Directory: || hashcat.induct
+[ CONTENT ]: Directory: || hashcat.outfiles
+[ CONTENT ]: Directory: || kernels
+[ CONTENT ]: Directory: Directory contains 6 directories.
 [ CONTENT ]: Directory: Files in directory .: 
+[ CONTENT ]: Directory: || boinc_finish_called
 [ CONTENT ]: Directory: || boinc_lockfile
 [ CONTENT ]: Directory: || clean.sh
 [ CONTENT ]: Directory: || config
@@ -49,20 +52,23 @@
 [ CONTENT ]: Directory: || dict1
 [ CONTENT ]: Directory: || formats.list
 [ CONTENT ]: Directory: || grammar
+[ CONTENT ]: Directory: || hashcat.dictstat2
 [ CONTENT ]: Directory: || hashcat.hcstat2
 [ CONTENT ]: Directory: || hashcat.hctune
+[ CONTENT ]: Directory: || hashcat.pid
 [ CONTENT ]: Directory: || hashcat64_v421_1.bin
 [ CONTENT ]: Directory: || hashcat64_v421_1.exe
 [ CONTENT ]: Directory: || hashcat_files_v421_1.zip
 [ CONTENT ]: Directory: || hashcatkernels1_7.zip
+[ CONTENT ]: Directory: || out
+[ CONTENT ]: Directory: || passwords.txt
 [ CONTENT ]: Directory: || pcfg-manager.bin
 [ CONTENT ]: Directory: || pcfg-manager.exe
 [ CONTENT ]: Directory: || preterminals
 [ CONTENT ]: Directory: || rules
 [ CONTENT ]: Directory: || runner.bin
-[ CONTENT ]: Directory: || runner.exe
 [ CONTENT ]: Directory: || stderr.txt
-[ CONTENT ]: Directory: Directory contains 20 files.
+[ CONTENT ]: Directory: Directory contains 24 files.
 [ CUSTOM  ]: ConfigTask: key : mode, value : n
 [ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
 [ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
@@ -132,31 +138,36 @@
 [ CHANGE  ]: ProcessBase: 	 argument '--potfile-disable'
 [ CHANGE  ]: ProcessBase: 	 argument '--logfile-disable'
 [ CHANGE  ]: ProcessBase: -------------------------------
-[ CHANGE  ]: ProcessBase: Process set start time : 1573052341934
+[ CHANGE  ]: ProcessBase: Process set start time : 1573221579695
 [  INFO   ]: TaskComputeBase: Manager process has started.
-[ CHANGE  ]: ProcessBase: Process set start time : 1573052341934
-[  INFO   ]: TaskComputeBase: Hashcat process has started.
-[  INFO   ]: ProcessLinux: Executing: ./pcfg-manager.bin --preterminals-file ./preterminals --grammar-file ./grammar
+[ CHANGE  ]: ProcessBase: Process set start time : 1573221579696
+[  INFO   ]: TaskComputeBase[:   INFO   Hashcat process has started.]: 
+ProcessLinux: Executing: ./pcfg-manager.bin --preterminals-file ./preterminals --grammar-file ./grammar
 [  INFO   ]: ProcessLinux: Executing: ./hashcat64_v421_1.bin -m 0 --optimized-kernel-enable --machine-readable -a 0 ../sample/data -l 922111225 --status-timer=10 --outfile passwords.txt --outfile-format=5 --quiet --status --machine-readable --restore-disable --potfile-disable --logfile-disable
-[ CUSTOM  ]: TaskNormal: Hashcat line: STATUS	6	SPEED	3857512	1000	EXEC_RUNTIME	6.053888	CURKU	0	PROGRESS	6291456	0	RECHASH	2	2	RECSALT	1	1	TEMP	36	REJECTED	0	UTIL	22	
+[ CUSTOM  ]: TaskNormal: Hashcat line: STATUS	6	SPEED	3981805	1000	EXEC_RUNTIME	6.006016	CURKU	0	PROGRESS	6291456	0	RECHASH	2	2	RECSALT	1	1	TEMP	34	REJECTED	0	UTIL	48	
 
 [ CUSTOM  ]: TaskNormal: Computed_hashes_index: 6291456
 [ CUSTOM  ]: TaskNormal: Difference_since_last_actualization: 6291456
-[ CHANGE  ]: ProcessBase: Process set stop time : 1573052349571
+[ CHANGE  ]: ProcessBase: Process set stop time : 1573221587118
 [  INFO   ]: TaskNormal: Looking for hashcat output file: passwords.txt
 [ CUSTOM  ]: Directory:  found file : passwords.txt
-[  INFO   ]: ProcessBase: Process execution time : 7.637
+[  INFO   ]: ProcessBase: Process execution time : 7.422
 [  INFO   ]: TaskBase: Result: 
 n
 0
-7.637
+7.422
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+23cdb72f02f1747b930353a7d7a780ef:6531643163316531
+168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
 23cdb72f02f1747b930353a7d7a780ef:6531643163316531
 168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
 
-[  INFO   ]: TaskBase: Result_file : out
+[ CUSTOM  ]: Directory:  found file : out
+[  INFO   ]: TaskBase: Result_file : ./out
 [IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
-15:59:09 (31471): called boinc_finish(0)
-14:45:06 (5396): Can't open init data file - running in standalone mode
+14:59:47 (6218): called boinc_finish(0)
+17:33:43 (25885): Can't open init data file - running in standalone mode
 [IMPORTANT]: : Runner 3.1.2
 [ CUSTOM  ]: Directory:  found versioned file : hashcat_files_v421_1.zip
 [  INFO   ]: FileZip: FileZip: extracted 719 entries from archive ../other/hashcat_files_v421_1.zip
@@ -216,14 +227,13 @@ n
 [ CONTENT ]: Directory: || hashcat_files_v421_1.zip
 [ CONTENT ]: Directory: || hashcatkernels1_7.zip
 [ CONTENT ]: Directory: || out
-[ CONTENT ]: Directory: || passwords.txt
 [ CONTENT ]: Directory: || pcfg-manager.bin
 [ CONTENT ]: Directory: || pcfg-manager.exe
 [ CONTENT ]: Directory: || preterminals
 [ CONTENT ]: Directory: || rules
 [ CONTENT ]: Directory: || runner.bin
 [ CONTENT ]: Directory: || stderr.txt
-[ CONTENT ]: Directory: Directory contains 23 files.
+[ CONTENT ]: Directory: Directory contains 22 files.
 [ CUSTOM  ]: ConfigTask: key : mode, value : n
 [ CUSTOM  ]: ConfigTask: key : attack_mode, value : 9
 [ CUSTOM  ]: ConfigTask: key : hash_type, value : 0
@@ -293,30 +303,28 @@ n
 [ CHANGE  ]: ProcessBase: 	 argument '--potfile-disable'
 [ CHANGE  ]: ProcessBase: 	 argument '--logfile-disable'
 [ CHANGE  ]: ProcessBase: -------------------------------
-[ CHANGE  ]: ProcessBase: Process set start time : 1573220706895
+[ CHANGE  ]: ProcessBase: Process set start time : 1573230823898
 [  INFO   ]: TaskComputeBase: Manager process has started.
-[ CHANGE  ]: ProcessBase: Process set start time : 1573220706895
+[ CHANGE  ]: ProcessBase: Process set start time : 1573230823898
 [  INFO   ]: TaskComputeBase: Hashcat process has started.
 [  INFO   ]: ProcessLinux: Executing: ./pcfg-manager.bin --preterminals-file ./preterminals --grammar-file ./grammar
 [  INFO   ]: ProcessLinux: Executing: ./hashcat64_v421_1.bin -m 0 --optimized-kernel-enable --machine-readable -a 0 ../sample/data -l 922111225 --status-timer=10 --outfile passwords.txt --outfile-format=5 --quiet --status --machine-readable --restore-disable --potfile-disable --logfile-disable
-[ CUSTOM  ]: TaskNormal: Hashcat line: STATUS	6	SPEED	4005267	1000	EXEC_RUNTIME	6.064128	CURKU	0	PROGRESS	6291456	0	RECHASH	2	2	RECSALT	1	1	TEMP	38	REJECTED	0	UTIL	31	
+[ CUSTOM  ]: TaskNormal: Hashcat line: STATUS	6	SPEED	4017130	1000	EXEC_RUNTIME	6.359392	CURKU	0	PROGRESS	6291456	0	RECHASH	2	2	RECSALT	1	1	TEMP	34	REJECTED	0	UTIL	39	
 
 [ CUSTOM  ]: TaskNormal: Computed_hashes_index: 6291456
 [ CUSTOM  ]: TaskNormal: Difference_since_last_actualization: 6291456
-[ CHANGE  ]: ProcessBase: Process set stop time : 1573220714308
+[ CHANGE  ]: ProcessBase: Process set stop time : 1573230831323
 [  INFO   ]: TaskNormal: Looking for hashcat output file: passwords.txt
 [ CUSTOM  ]: Directory:  found file : passwords.txt
-[  INFO   ]: ProcessBase: Process execution time : 7.413
+[  INFO   ]: ProcessBase: Process execution time : 7.425
 [  INFO   ]: TaskBase: Result: 
 n
 0
-7.413
-23cdb72f02f1747b930353a7d7a780ef:6531643163316531
-168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
+7.425
 23cdb72f02f1747b930353a7d7a780ef:6531643163316531
 168ef6cbedb40bbacb52aaf2fabd8d24:653265326f317731
 
 [ CUSTOM  ]: Directory:  found file : out
 [  INFO   ]: TaskBase: Result_file : ./out
 [IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
-14:45:14 (5396): called boinc_finish(0)
+17:33:51 (25885): called boinc_finish(0)

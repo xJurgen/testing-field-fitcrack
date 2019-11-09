@@ -10,14 +10,13 @@
 /* Protected */
 
 void ProcessWindows::launchSubprocess() {
-  puts("launchSubprocess");
   std::string command;
   command = getReadableArguments();
 
   /** Execute application - print it before redirection so that it goes to
   * stderr.txt */
   Logging::debugPrint(Logging::Detail::GeneralInfo, "Executing: " + command);
-  printf("ptr %p this->in_pipe_ %p\n", (void *)in_pipe_, (void *)this->in_pipe_);
+
   if (in_pipe_)
     startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getReadHandle();
 
@@ -38,18 +37,11 @@ void ProcessWindows::launchSubprocess() {
     RunnerUtils::runtimeException("CreateProcess() failed", GetLastError());
   }
 
-  printf("ok\n");
-
 /* Parent doesn't write */
 err_pipe_->closeWrite();
 out_pipe_->closeWrite();
 }
 /* Public */
-
-void ProcessWindows::setInPipe(PipeBase *in_pipe){
-  printf("SetInPipe Windows %p\n", (void *)in_pipe);
-  this->in_pipe_ = in_pipe;
-}
 
 ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >& exec_args, bool isPCFG) : ProcessBase(exec_name, exec_args) {
 
@@ -61,7 +53,7 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
   }
   err_pipe_ = new PipeWindows(true);
   in_pipe_ = nullptr;
-  puts("Ctor");
+
   if (!SetHandleInformation(static_cast<PipeWindows*>(out_pipe_)->getReadHandle(), HANDLE_FLAG_INHERIT, 0)) {
     RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
   }
@@ -77,6 +69,9 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
   startup_info_.hStdOutput = static_cast<PipeWindows*>(out_pipe_)->getWriteHandle();
   startup_info_.hStdInput = GetStdHandle(STD_INPUT_HANDLE);
   startup_info_.dwFlags |= STARTF_USESTDHANDLES;
+
+  std::string s = out_pipe_->readLine(this);
+  printf("precitane %s\n", s.c_str());
 }
 
 ProcessWindows::~ProcessWindows() {

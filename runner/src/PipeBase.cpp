@@ -47,6 +47,7 @@ std::string PipeBase::readLine(ProcessBase* process_) {
       if(!process_->isRunning()){
         break;
       }
+      puts("not dead");
       sleep(HashcatConstant::ProgressPeriod);
     }
   }
