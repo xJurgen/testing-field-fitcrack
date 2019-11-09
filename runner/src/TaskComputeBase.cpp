@@ -135,8 +135,6 @@ void TaskComputeBase::startComputation() {
     }
   }
 
-  puts("startCom");
-
   if (!process_->isRunning()) {
     process_->run();
     Logging::debugPrint(Logging::Detail::GeneralInfo, "Hashcat process has started.");

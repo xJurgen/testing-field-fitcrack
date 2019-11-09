@@ -69,9 +69,6 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
   startup_info_.hStdOutput = static_cast<PipeWindows*>(out_pipe_)->getWriteHandle();
   startup_info_.hStdInput = GetStdHandle(STD_INPUT_HANDLE);
   startup_info_.dwFlags |= STARTF_USESTDHANDLES;
-
-  std::string s = out_pipe_->readLine(this);
-  printf("precitane %s\n", s.c_str());
 }
 
 ProcessWindows::~ProcessWindows() {

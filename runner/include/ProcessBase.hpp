@@ -138,6 +138,10 @@ class ProcessBase {
         * @brief Pure virtual function for getting an out (read) file descriptor
         */
         virtual PipeBase* GetPipeOut();
+
+        void WriteMsg(std::string &s) {
+           in_pipe_->writeMessage(s);
+        }
 };  // end of class ProcessBase
 
 #endif // PROCESSBASE_HPP

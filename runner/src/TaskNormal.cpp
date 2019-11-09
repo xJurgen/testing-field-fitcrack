@@ -251,16 +251,24 @@ bool TaskNormal::parseHashcatOutputLine(std::string& output_line) {
 }
 
 void TaskNormal::progress() {
-  std::string line;
+  std::string line, line_pcfg;
 
   PRINT_POSITION_IN_CODE();
 
   while (process_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
-    puts("pred read");
+
+    line_pcfg = process_PCFGmanager_->readOutPipeLine(process_PCFGmanager_);
+
+    if (!line_pcfg.empty()) {
+        printf("Data from pcfg: %s\n", line_pcfg.c_str());
+        process_->WriteMsg(line_pcfg);
+    }
+
     line = process_->readOutPipeLine(process_);
     puts("po read");
+    printf("pcfg %p\n", process_PCFGmanager_);
     PRINT_POSITION_IN_CODE();
 
     if (parseHashcatOutputLine(line)) {
