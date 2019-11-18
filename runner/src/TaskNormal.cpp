@@ -279,5 +279,7 @@ void TaskNormal::progress() {
    puts("progress reported");
 
   }
+  
+puts("koniec");
   PRINT_POSITION_IN_CODE();
 }
