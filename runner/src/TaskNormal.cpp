@@ -262,12 +262,14 @@ void TaskNormal::progress() {
     PRINT_POSITION_IN_CODE();
     
     std::string line;
+   printf("cakam na data z pcfg\n");
     line = process_PCFGmanager_->readOutPipeLine(process_PCFGmanager_);
     if(!line.empty()) {
         printf("Data: %s\n", line.data());
         //process_->GetPipeIn()->writeToStdin((char *)line.data(), line.size());
     }
-
+    
+    printf("cakam na data z hashcatu\n");
     line = process_->readOutPipeLine(process_);
     PRINT_POSITION_IN_CODE();
 
