@@ -276,6 +276,7 @@ void TaskNormal::progress() {
     if (parseHashcatOutputLine(line)) {
 	    reportProgress();
 	  }
+   puts("progress reported");
 
   }
   PRINT_POSITION_IN_CODE();

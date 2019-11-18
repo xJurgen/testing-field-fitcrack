@@ -94,7 +94,9 @@ return (int)exit_code;
 
 bool ProcessWindows::isRunning() {
   DWORD exit_code;
+  puts("aky je exit code");
   GetExitCodeProcess(process_information_.hProcess, &exit_code);
+  printf("exit code je %d\n", exit_code);
   return exit_code == STILL_ACTIVE;
 }
 
