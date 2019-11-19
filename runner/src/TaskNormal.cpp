@@ -262,8 +262,10 @@ void TaskNormal::progress() {
     PRINT_POSITION_IN_CODE();
 
     std::string line;
+    printf("ptr %p\n", process_PCFGmanager_->GetPipeOut());
     printf("cakam na data z pcfg\n");
     size_t read_chars = process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf));
+    puts("dockal som sa");
     if (true) {
       buf[32000 - 1] = 0;
       printf("Data: \n%s\n", buf);
