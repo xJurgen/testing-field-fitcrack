@@ -257,7 +257,7 @@ void TaskNormal::progress() {
 
   char buf[32000];
 
-  while (true || process_->isRunning()) {
+  while (process_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
 
@@ -277,8 +277,8 @@ void TaskNormal::progress() {
     PRINT_POSITION_IN_CODE();
 
      if (parseHashcatOutputLine(line)) {
-   //          reportProgress();
-           }
+             reportProgress();
+     }
     // puts("progress reported");
   }
 
