@@ -273,7 +273,7 @@ void TaskNormal::progress() {
     }
 
     // printf("cakam na data z hashcatu\n");
-    //line = process_->readOutPipeLine(process_);
+    line = process_->readOutPipeLine(process_);
     PRINT_POSITION_IN_CODE();
 
      if (parseHashcatOutputLine(line)) {
