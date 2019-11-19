@@ -133,7 +133,7 @@ int  PipeWindows::writeMessage(std::string& message) {
 size_t PipeWindows::readFromStdout(char *buf, size_t n) {
   DWORD written_chars = 0;
 
-  if (!ReadFile(write_, buf, n, &written_chars, NULL)) {
+  if (!ReadFile(read_, buf, n, &written_chars, NULL)) {
     RunnerUtils::runtimeException("ReadFile() failed", (int) GetLastError());
   }
 
@@ -144,7 +144,7 @@ size_t PipeWindows::readFromStdout(char *buf, size_t n) {
 size_t PipeWindows::writeToStdin(char *buf, size_t n) {
   DWORD written_chars = 0;
 
-  if (!WriteFile(read_, buf, n, &written_chars, NULL)) {
+  if (!WriteFile(write_, buf, n, &written_chars, NULL)) {
     RunnerUtils::runtimeException("WriteFile() failed", (int) GetLastError());
   }
 
