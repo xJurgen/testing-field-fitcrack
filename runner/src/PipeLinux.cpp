@@ -139,9 +139,11 @@ int PipeLinux::writeMessage(std::string& message) {
   return write(write_, message.data(), message.length());
 }
 
-int PipeLinux::writeMessageStdin(std::string& message) {
-  Logging::debugPrint(Logging::Detail::CustomOutput, POSITION_IN_CODE + "Pipe writing message : " + message);
-  return write(read_, message.data(), message.length());
+size_t PipeLinux::readFromStdout(char *buf, size_t n) {
+  return read(read_, buf, n);
 }
 
+size_t PipeLinux::writeToStdin(char *buf, size_t n) {
+  return write(write_, buf, n);
+}
 #endif // __linux__

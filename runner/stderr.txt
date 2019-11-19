@@ -1,0 +1,18 @@
+19:01:25 (8005): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[IMPORTANT]: : Runner failed with std::runtime_error: 
+ what() : zip_open() failed on archive: with zip_error code 9 : error #.2 => No such file or directory
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+19:01:25 (8005): called boinc_finish(0)
+19:01:55 (8055): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[IMPORTANT]: : Runner failed with std::runtime_error: 
+ what() : zip_open() failed on archive: with zip_error code 9 : error #.2 => No such file or directory
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+19:01:55 (8055): called boinc_finish(0)
+19:02:35 (8079): Can't open init data file - running in standalone mode
+[IMPORTANT]: : Runner 3.1.2
+[IMPORTANT]: : Runner failed with std::runtime_error: 
+ what() : zip_open() failed on archive: with zip_error code 9 : error #.2 => No such file or directory
+[IMPORTANT]: : Results and run outputs are stored in 'out' and 'stderr.txt' files.
+19:02:35 (8079): called boinc_finish(0)

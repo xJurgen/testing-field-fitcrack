@@ -107,8 +107,8 @@ public:
   * @param   message [in] String to be written to pipe
   * @return  Number of written characters
   */
-  bool writeToStdin(char *buf, size_t n);
-  bool readFromStdout(char *buf, size_t n);
+  size_t writeToStdin(char *buf, size_t n);
+  size_t readFromStdout(char *buf, size_t n);
 };
 #endif // NAMEDPIPEWINDOWS_HPP
 

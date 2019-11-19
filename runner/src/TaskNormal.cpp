@@ -255,31 +255,31 @@ void TaskNormal::progress() {
 
   PRINT_POSITION_IN_CODE();
 
-  char buf[16];
+  char buf[32000];
 
-  while (process_->isRunning()) {
+  while (process_PCFGmanager_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
-    
+
     std::string line;
-   printf("cakam na data z pcfg\n");
-    line = process_PCFGmanager_->readOutPipeLine(process_PCFGmanager_);
-    if(!line.empty()) {
-        printf("Data: %s\n", line.data());
-        //process_->GetPipeIn()->writeToStdin((char *)line.data(), line.size());
+    printf("cakam na data z pcfg\n");
+    size_t read_chars = process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf));
+    if (true) {
+      buf[32000 - 1] = 0;
+      printf("Data: \n%s\n", buf);
+      process_->GetPipeIn()->writeToStdin(buf, read_chars);
     }
-    
-    printf("cakam na data z hashcatu\n");
+
+    // printf("cakam na data z hashcatu\n");
     line = process_->readOutPipeLine(process_);
     PRINT_POSITION_IN_CODE();
 
-    if (parseHashcatOutputLine(line)) {
-	    reportProgress();
-	  }
-   puts("progress reported");
-
+    /* if (parseHashcatOutputLine(line)) {
+             reportProgress();
+           }*/
+    // puts("progress reported");
   }
-  
+
 puts("koniec");
   PRINT_POSITION_IN_CODE();
 }
