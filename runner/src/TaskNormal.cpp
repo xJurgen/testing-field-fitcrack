@@ -257,7 +257,7 @@ void TaskNormal::progress() {
 
   char buf[32000];
 
-  while (process_PCFGmanager_->isRunning()) {
+  while (true || process_PCFGmanager_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
 
@@ -269,11 +269,11 @@ void TaskNormal::progress() {
     if (true) {
       buf[32000 - 1] = 0;
       printf("Data: \n%s\n", buf);
-      process_->GetPipeIn()->writeToStdin(buf, read_chars);
+     // process_->GetPipeIn()->writeToStdin(buf, read_chars);
     }
 
     // printf("cakam na data z hashcatu\n");
-    line = process_->readOutPipeLine(process_);
+    // line = process_->readOutPipeLine(process_);
     PRINT_POSITION_IN_CODE();
 
     /* if (parseHashcatOutputLine(line)) {
