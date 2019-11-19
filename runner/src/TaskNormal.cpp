@@ -264,9 +264,9 @@ void TaskNormal::progress() {
     std::string line;
     printf("ptr %p\n", process_PCFGmanager_->GetPipeOut());
     printf("cakam na data z pcfg\n");
-    size_t read_chars = process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf));
+    size_t read_chars = 0; //process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf));
     puts("dockal som sa");
-    if (true) {
+    if (read_chars) {
       buf[32000 - 1] = 0;
       printf("Data: \n%s\n", buf);
      // process_->GetPipeIn()->writeToStdin(buf, read_chars);
