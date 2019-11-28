@@ -264,13 +264,17 @@ void TaskNormal::progress() {
     std::string line;
     printf("ptr %p\n", process_PCFGmanager_->GetPipeOut());
     printf("cakam na data z pcfg\n");
-    size_t read_chars = 0; //process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf));
+    size_t read_chars = process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf));
     puts("dockal som sa");
     if (read_chars) {
       buf[32000 - 1] = 0;
       printf("Data: \n%s\n", buf);
-     // process_->GetPipeIn()->writeToStdin(buf, read_chars);
-    }
+      int ret = process_->GetPipeIn()->writeToStdin(buf, read_chars);
+     printf("zapisane %d\n", ret);
+      if (ret == 0) break;
+    } else {
+      break;
+   }
 
     // printf("cakam na data z hashcatu\n");
     line = process_->readOutPipeLine(process_);
