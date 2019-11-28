@@ -277,7 +277,7 @@ void TaskNormal::progress() {
   
   puts("pred looopom");
   size_t cnt = 0;
-  while (true) {
+  while (process_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
 #if 1
@@ -298,7 +298,7 @@ void TaskNormal::progress() {
    }
 #endif
     // printf("c akam na data z hashcatu\n");
-    if (++cnt % 32 == 0) {
+    if (++cnt % 32 == 0 && process_->isRunning()) {
     line = process_->readOutPipeLine(process_);
     PRINT_POSITION_IN_CODE();
 
