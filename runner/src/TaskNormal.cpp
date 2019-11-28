@@ -290,8 +290,9 @@ void TaskNormal::progress() {
     if (read_chars) {
   //    buf[32000 - 1] = 0;
 //      printf("Data: \n%s\n", buf);
+      printf("zapisujem...\n");
       int ret = process_->GetPipeIn()->writeToStdin(buf, read_chars);
-     printf("zapisane %d\n", ret);
+     printf("... zapisane %d\n", ret);
       if (ret == 0) break;
     } else {
       break;
