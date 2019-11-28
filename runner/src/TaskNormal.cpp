@@ -277,7 +277,7 @@ void TaskNormal::progress() {
   
   puts("pred looopom");
   size_t cnt = 0;
-  while (process_->isRunning()) {
+  while (true) {
 
     PRINT_POSITION_IN_CODE();
 #if 1
