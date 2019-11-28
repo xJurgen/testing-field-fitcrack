@@ -39,6 +39,7 @@ void PipeWindows::createPipe(bool is_NONBLOCK_) {
   RunnerUtils::runtimeException("CreatePipe() failed", GetLastError());
 
   if (is_NONBLOCK_) {
+
     DWORD mode = PIPE_NOWAIT;
     if (!SetNamedPipeHandleState(read_, &mode, NULL, NULL)) {
        RunnerUtils::runtimeException("SetNamedPipeHandleState() failed", GetLastError());
