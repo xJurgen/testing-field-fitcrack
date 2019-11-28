@@ -298,7 +298,7 @@ void TaskNormal::progress() {
    }
 #endif
     // printf("c akam na data z hashcatu\n");
-    if (++cnt % 8 == 0) {
+    if (++cnt % 32 == 0) {
     line = process_->readOutPipeLine(process_);
     PRINT_POSITION_IN_CODE();
 
