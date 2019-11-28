@@ -44,6 +44,7 @@ std::string PipeBase::readLine(ProcessBase* process_) {
     if ((read_chars = readChar(c)) > 0) {
       line += c;
     } else if (read_chars == -1) {
+      if (!process_) break;
       if(!process_->isRunning()){
         break;
       }

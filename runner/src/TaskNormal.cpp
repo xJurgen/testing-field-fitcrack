@@ -300,7 +300,7 @@ void TaskNormal::progress() {
     // printf("c akam na data z hashcatu\n");
     if (++cnt % 32 == 0 && process_->isRunning()) {
 
-    line = process_->readOutPipeLine(process_);
+    line = process_->readOutPipeLine(nullptr); //process_);
    printf("len %d\n", line.length());
     PRINT_POSITION_IN_CODE();
 
