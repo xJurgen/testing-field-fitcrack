@@ -256,7 +256,7 @@ void TaskNormal::progress() {
   PRINT_POSITION_IN_CODE();
 
   char buf[32000];
-
+#if 0
   while(true) {
     //printf("ptr %p\n", process_PCFGmanager_->GetPipeOut());
     printf("cakam na data z pcfg\n");
@@ -273,12 +273,14 @@ void TaskNormal::progress() {
       break;
    }
  }
+#endif
   
   puts("pred looopom");
+  size_t cnt = 0;
   while (process_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
-#if 0
+#if 1
     std::string line;
     printf("ptr %p\n", process_PCFGmanager_->GetPipeOut());
     printf("cakam na data z pcfg\n");
@@ -295,7 +297,8 @@ void TaskNormal::progress() {
       break;
    }
 #endif
-    // printf("cakam na data z hashcatu\n");
+    // printf("c akam na data z hashcatu\n");
+    if (++cnt % 8 == 0) {
     line = process_->readOutPipeLine(process_);
     PRINT_POSITION_IN_CODE();
 
@@ -303,6 +306,7 @@ void TaskNormal::progress() {
              reportProgress();
      }
     // puts("progress reported");
+   }
   }
 
 puts("koniec");
