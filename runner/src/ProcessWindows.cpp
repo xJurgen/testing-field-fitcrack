@@ -47,13 +47,13 @@ out_pipe_->closeWrite();
 ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >& exec_args, bool isPCFG) : ProcessBase(exec_name, exec_args) {
 
   if(isPCFG){
-    out_pipe_ = new PipeWindows(false);
+    out_pipe_ = new PipeWindows(true);
   }
   else{
     out_pipe_ = new PipeWindows(true);
   }
   err_pipe_ = new PipeWindows(true);
-  in_pipe_ = new PipeWindows(false);
+  in_pipe_ = new PipeWindows(true);
 
   if (!SetHandleInformation(static_cast<PipeWindows*>(out_pipe_)->getReadHandle(), HANDLE_FLAG_INHERIT, 0)) {
     RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
