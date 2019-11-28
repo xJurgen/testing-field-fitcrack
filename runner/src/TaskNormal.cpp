@@ -257,10 +257,27 @@ void TaskNormal::progress() {
 
   char buf[32000];
 
+  while(true) {
+    //printf("ptr %p\n", process_PCFGmanager_->GetPipeOut());
+    printf("cakam na data z pcfg\n");
+    memset(buf, 0, sizeof(buf));
+    size_t read_chars = process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf));
+    printf("dockal som sa %d\n", read_chars);
+    if (read_chars) {
+  //    buf[32000 - 1] = 0;
+//      printf("Data: \n%s\n", buf);
+      int ret = process_->GetPipeIn()->writeToStdin(buf, read_chars);
+      printf("zapisane %d\n", ret);
+      if (ret == 0) break;
+    } else {
+      break;
+   }
+ }
+
   while (process_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
-
+#if 0
     std::string line;
     printf("ptr %p\n", process_PCFGmanager_->GetPipeOut());
     printf("cakam na data z pcfg\n");
@@ -276,7 +293,7 @@ void TaskNormal::progress() {
     } else {
       break;
    }
-
+#endif
     // printf("cakam na data z hashcatu\n");
     line = process_->readOutPipeLine(process_);
     PRINT_POSITION_IN_CODE();
