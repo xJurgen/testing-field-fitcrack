@@ -273,7 +273,8 @@ void TaskNormal::progress() {
       break;
    }
  }
-
+  
+  puts("pred looopom");
   while (process_->isRunning()) {
 
     PRINT_POSITION_IN_CODE();
