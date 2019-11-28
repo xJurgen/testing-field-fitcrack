@@ -307,8 +307,10 @@ void TaskNormal::progress() {
      }
     // puts("progress reported");
    }
+
+   puts("skoncil som test");
   }
 
-puts("koniec");
+  puts("koniec");
   PRINT_POSITION_IN_CODE();
 }
