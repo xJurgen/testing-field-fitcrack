@@ -267,8 +267,8 @@ void TaskNormal::progress() {
     size_t read_chars = process_PCFGmanager_->GetPipeOut()->readFromStdout(buf, sizeof(buf));
     printf("dockal som sa %d", read_chars);
     if (read_chars) {
-      buf[32000 - 1] = 0;
-      printf("Data: \n%s\n", buf);
+  //    buf[32000 - 1] = 0;
+//      printf("Data: \n%s\n", buf);
       int ret = process_->GetPipeIn()->writeToStdin(buf, read_chars);
      printf("zapisane %d\n", ret);
       if (ret == 0) break;
