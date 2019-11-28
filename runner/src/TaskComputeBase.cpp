@@ -108,8 +108,8 @@ void TaskComputeBase::initialize() {
     process_ = Process::create(hashcat_arguments_, directory_);
 
     if(isPCFG_){
-      process_->initInPipe();
-      process_->setInPipe(manager_pipeout);
+//      process_->initInPipe();
+//      process_->setInPipe(manager_pipeout);
     }
   }
 

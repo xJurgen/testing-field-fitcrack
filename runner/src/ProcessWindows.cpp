@@ -18,8 +18,8 @@ void ProcessWindows::launchSubprocess() {
   Logging::debugPrint(Logging::Detail::GeneralInfo, "Executing: " + command);
 
   if (in_pipe_) {
-    puts("prestavujem in pipe");
-    startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getReadHandle();
+//    puts("prestavujem in pipe");
+//    startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getReadHandle();
   }
   /** Start the child process */
   if(!CreateProcess(NULL,   // Executable path
@@ -68,7 +68,7 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
   startup_info_.cb = sizeof(STARTUPINFO);
   startup_info_.hStdError  = static_cast<PipeWindows*>(err_pipe_)->getWriteHandle();
   startup_info_.hStdOutput = static_cast<PipeWindows*>(out_pipe_)->getWriteHandle();
-  startup_info_.hStdInput = GetStdHandle(STD_INPUT_HANDLE);
+  startup_info_.hStdInput = static_cast<PipeWindows*>(in_pipe_)->getReadHandle();
   startup_info_.dwFlags |= STARTF_USESTDHANDLES;
 }
 
