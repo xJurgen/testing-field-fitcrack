@@ -255,7 +255,7 @@ void TaskNormal::progress() {
 
   PRINT_POSITION_IN_CODE();
 
-  char buf[32000];
+  char buf[8192];
 #if 0
   while(true) {
     //printf("ptr %p\n", process_PCFGmanager_->GetPipeOut());
@@ -299,7 +299,7 @@ void TaskNormal::progress() {
    }
 #endif
     // printf("c akam na data z hashcatu\n");
-    if (false && ++cnt % 32 == 0 && process_->isRunning()) {
+    if (++cnt % 32 == 0 && process_->isRunning()) {
 
     line = process_->readOutPipeLine(nullptr); //process_);
    printf("len %d\n", line.length());
