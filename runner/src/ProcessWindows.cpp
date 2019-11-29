@@ -37,7 +37,7 @@ void ProcessWindows::launchSubprocess() {
 /* Parent doesn't write */
 err_pipe_->closeAll();
 out_pipe_->closeAll();
-if (in_pipe_) in_pipe_->closeRead();
+//if (in_pipe_) in_pipe_->closeRead();
 }
 /* Public */
 
@@ -51,14 +51,14 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
   }
   err_pipe_ = new PipeWindows(true);
   
-  if (isPCFG) {
-  in_pipe_ = nullptr;
-  } else {
+ // if (isPCFG) {
+ // in_pipe_ = nullptr;
+//  } else {
   in_pipe_ = new PipeWindows(false);
- if (!SetHandleInformation(static_cast<PipeWindows*>(in_pipe_)->getWriteHandle(), HANDLE_FLAG_INHERIT, 0)) {
+  if (!SetHandleInformation(static_cast<PipeWindows*>(in_pipe_)->getWriteHandle(), HANDLE_FLAG_INHERIT, 0)) {
     RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
   }
-}
+  //}
   if (!SetHandleInformation(static_cast<PipeWindows*>(out_pipe_)->getReadHandle(), HANDLE_FLAG_INHERIT, 0)) {
     RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
   }
