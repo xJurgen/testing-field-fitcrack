@@ -41,6 +41,7 @@ void ProcessWindows::launchSubprocess() {
 /* Parent doesn't write */
 err_pipe_->closeWrite();
 out_pipe_->closeWrite();
+in_pipe_->closeRead();
 }
 /* Public */
 
@@ -61,6 +62,10 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
   if (!SetHandleInformation(static_cast<PipeWindows*>(err_pipe_)->getReadHandle(), HANDLE_FLAG_INHERIT, 0)) {
     RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
   }
+  if (!SetHandleInformation(static_cast<PipeWindows*>(in_pipe_)->getWriteHandle(), HANDLE_FLAG_INHERIT, 0)) {
+    RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
+  }
+
 
   ZeroMemory(&startup_info_, sizeof(startup_info_));
   ZeroMemory(&process_information_, sizeof(process_information_));
