@@ -145,10 +145,11 @@ size_t PipeWindows::readFromStdout(char *buf, size_t n) {
 size_t PipeWindows::writeToStdin(char *buf, size_t n) {
   DWORD written_chars = 0;
 
+  puts("pred zapisom");
   if (!WriteFile(write_, buf, n, &written_chars, NULL)) {
     RunnerUtils::runtimeException("WriteFile() failed", (int) GetLastError());
   }
-
+  puts("po zapise");
   return written_chars;
 }
 #endif // _WIN32
