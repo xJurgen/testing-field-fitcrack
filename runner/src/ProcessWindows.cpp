@@ -17,10 +17,6 @@ void ProcessWindows::launchSubprocess() {
   * stderr.txt */
   Logging::debugPrint(Logging::Detail::GeneralInfo, "Executing: " + command);
 
-  if (in_pipe_) {
-//    puts("prestavujem in pipe");
-//    startup_info_.hStdInput  = static_cast<PipeWindows*>(in_pipe_)->getReadHandle();
-  }
   /** Start the child process */
   if(!CreateProcess(NULL,   // Executable path
   (char*)(command.c_str()),        // Command line
@@ -39,9 +35,9 @@ void ProcessWindows::launchSubprocess() {
   }
 
 /* Parent doesn't write */
-err_pipe_->closeWrite();
-out_pipe_->closeWrite();
-in_pipe_->closeRead();
+err_pipe_->closeAll();
+out_pipe_->closeAll();
+if (in_pipe_) in_pipe_->closeRead();
 }
 /* Public */
 
@@ -54,17 +50,22 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
     out_pipe_ = new PipeWindows(true);
   }
   err_pipe_ = new PipeWindows(true);
+  
+  if (isPCFG) {
+  in_pipe_ = nullptr;
+  } else {
   in_pipe_ = new PipeWindows(false);
-
+ if (!SetHandleInformation(static_cast<PipeWindows*>(in_pipe_)->getWriteHandle(), HANDLE_FLAG_INHERIT, 0)) {
+    RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
+  }
+}
   if (!SetHandleInformation(static_cast<PipeWindows*>(out_pipe_)->getReadHandle(), HANDLE_FLAG_INHERIT, 0)) {
     RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
   }
   if (!SetHandleInformation(static_cast<PipeWindows*>(err_pipe_)->getReadHandle(), HANDLE_FLAG_INHERIT, 0)) {
     RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
   }
-  if (!SetHandleInformation(static_cast<PipeWindows*>(in_pipe_)->getWriteHandle(), HANDLE_FLAG_INHERIT, 0)) {
-    RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
-  }
+
 
 
   ZeroMemory(&startup_info_, sizeof(startup_info_));
