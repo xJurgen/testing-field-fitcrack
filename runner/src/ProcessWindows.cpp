@@ -35,8 +35,8 @@ void ProcessWindows::launchSubprocess() {
   }
 
 /* Parent doesn't write */
-err_pipe_->closeAll();
-out_pipe_->closeAll();
+err_pipe_->closeWrite();
+out_pipe_->closeWrite();
 //if (in_pipe_) in_pipe_->closeRead();
 }
 /* Public */
