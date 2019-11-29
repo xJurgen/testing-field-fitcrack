@@ -74,7 +74,8 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
   startup_info_.cb = sizeof(STARTUPINFO);
   startup_info_.hStdError  = static_cast<PipeWindows*>(err_pipe_)->getWriteHandle();
   startup_info_.hStdOutput = static_cast<PipeWindows*>(out_pipe_)->getWriteHandle();
-  startup_info_.hStdInput = static_cast<PipeWindows*>(in_pipe_)->getReadHandle();
+  if (in_pipe_)
+    startup_info_.hStdInput = static_cast<PipeWindows*>(in_pipe_)->getReadHandle();
   startup_info_.dwFlags |= STARTF_USESTDHANDLES;
 }
 
