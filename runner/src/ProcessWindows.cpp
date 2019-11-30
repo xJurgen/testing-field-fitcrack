@@ -43,6 +43,7 @@ out_pipe_->closeWrite();
 
 ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >& exec_args, bool isPCFG) : ProcessBase(exec_name, exec_args) {
 
+  isHashCatProcess = !isPCFG;
   if(isPCFG){
     out_pipe_ = new PipeWindows(false);
   }
