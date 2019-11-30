@@ -37,7 +37,7 @@ CloseHandle(process_information_.hProcess);
 CloseHandle(process_information_.hThread);
 
 /* Parent doesn't write */
-err_pipe_->closeWrite();
+err_pipe_->closeAll();
 out_pipe_->closeWrite();
 //if (in_pipe_) in_pipe_->closeRead();
 }
