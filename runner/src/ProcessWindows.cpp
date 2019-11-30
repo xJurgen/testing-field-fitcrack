@@ -78,9 +78,8 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
       RunnerUtils::runtimeException("SetHandleInformation() failed",
                                     GetLastError());
     }
-    /
 
-        ZeroMemory(&startup_info_, sizeof(startup_info_));
+    ZeroMemory(&startup_info_, sizeof(startup_info_));
     ZeroMemory(&process_information_, sizeof(process_information_));
 
     startup_info_.cb = sizeof(STARTUPINFO);
