@@ -20,7 +20,7 @@ private:
 
   STARTUPINFO startup_info_;			/**< Windows STARTUPINFO structure */
   PROCESS_INFORMATION process_information_;	/**< Windows PROCESS_INFORMATION structure */
-  bool isHashCatProcess;  
+  bool isHashCatProcess;
 protected:
 
   /**
