@@ -33,6 +33,8 @@ void ProcessWindows::launchSubprocess() {
     out_pipe_->closeAll();
     RunnerUtils::runtimeException("CreateProcess() failed", GetLastError());
   }
+CloseHandle(process_information_.hProcess);
+CloseHandle(process_information_.hThread);
 
 /* Parent doesn't write */
 err_pipe_->closeWrite();
