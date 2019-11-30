@@ -50,34 +50,47 @@ ProcessWindows::ProcessWindows(const std::string& exec_name, std::vector<char* >
     out_pipe_ = new PipeWindows(true);
   }
   err_pipe_ = new PipeWindows(true);
-  
- // if (isPCFG) {
- // in_pipe_ = nullptr;
-//  } else {
   in_pipe_ = new PipeWindows(false);
-  if (!SetHandleInformation(static_cast<PipeWindows*>(in_pipe_)->getWriteHandle(), HANDLE_FLAG_INHERIT, 0)) {
-    RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
+  if (isHashCatProcess) {
+    if (!SetHandleInformation(
+            static_cast<PipeWindows *>(out_pipe_)->getWriteHandle(),
+            HANDLE_FLAG_INHERIT, 0)) {
+      RunnerUtils::runtimeException("SetHandleInformation() failed",
+                                    GetLastError());
+    }
+    if (!SetHandleInformation(
+            static_cast<PipeWindows *>(err_pipe_)->getReadHandle(),
+            HANDLE_FLAG_INHERIT, 0)) {
+      RunnerUtils::runtimeException("SetHandleInformation() failed",
+                                    GetLastError());
+    }
+  } else {
+    if (!SetHandleInformation(
+            static_cast<PipeWindows *>(out_pipe_)->getReadHandle(),
+            HANDLE_FLAG_INHERIT, 0)) {
+      RunnerUtils::runtimeException("SetHandleInformation() failed",
+                                    GetLastError());
+    }
+    if (!SetHandleInformation(
+            static_cast<PipeWindows *>(err_pipe_)->getReadHandle(),
+            HANDLE_FLAG_INHERIT, 0)) {
+      RunnerUtils::runtimeException("SetHandleInformation() failed",
+                                    GetLastError());
+    }
+    /
+
+        ZeroMemory(&startup_info_, sizeof(startup_info_));
+    ZeroMemory(&process_information_, sizeof(process_information_));
+
+    startup_info_.cb = sizeof(STARTUPINFO);
+    startup_info_.hStdError =
+        static_cast<PipeWindows *>(err_pipe_)->getWriteHandle();
+    startup_info_.hStdOutput =
+        static_cast<PipeWindows *>(out_pipe_)->getWriteHandle();
+    startup_info_.hStdInput =
+        static_cast<PipeWindows *>(in_pipe_)->getReadHandle();
+    startup_info_.dwFlags |= STARTF_USESTDHANDLES;
   }
-  //}
-  if (!SetHandleInformation(static_cast<PipeWindows*>(out_pipe_)->getReadHandle(), HANDLE_FLAG_INHERIT, 0)) {
-    RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
-  }
-  if (!SetHandleInformation(static_cast<PipeWindows*>(err_pipe_)->getReadHandle(), HANDLE_FLAG_INHERIT, 0)) {
-    RunnerUtils::runtimeException("SetHandleInformation() failed", GetLastError());
-  }
-
-
-
-  ZeroMemory(&startup_info_, sizeof(startup_info_));
-  ZeroMemory(&process_information_, sizeof(process_information_));
-
-  startup_info_.cb = sizeof(STARTUPINFO);
-  startup_info_.hStdError  = static_cast<PipeWindows*>(err_pipe_)->getWriteHandle();
-  startup_info_.hStdOutput = static_cast<PipeWindows*>(out_pipe_)->getWriteHandle();
-  if (in_pipe_)
-    startup_info_.hStdInput = static_cast<PipeWindows*>(in_pipe_)->getReadHandle();
-  startup_info_.dwFlags |= STARTF_USESTDHANDLES;
-}
 
 ProcessWindows::~ProcessWindows() {
   CloseHandle(process_information_.hProcess);
