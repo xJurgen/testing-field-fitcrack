@@ -37,8 +37,10 @@ CloseHandle(process_information_.hProcess);
 CloseHandle(process_information_.hThread);
 
 /* Parent doesn't write */
-err_pipe_->closeAll();
+err_pipe_->closeWrite();
 out_pipe_->closeWrite();
+if (isHashCatProcess) 
+  in_pipe_->closeRead();
 //if (in_pipe_) in_pipe_->closeRead();
 }
 /* Public */
